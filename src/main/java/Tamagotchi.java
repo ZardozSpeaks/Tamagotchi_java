@@ -1,16 +1,16 @@
 public class Tamagotchi {
   private String mName = "";
-  private int mEnergy = MAX_ENERGY;
-  private int mFullness = MAX_FULLNESS;
-  private int mHappiness = MAX_HAPPINESS;
+  private int mEnergy;
+  private int mFullness;
+  private int mHappiness;
   private final static int MAX_ENERGY = 8;
   private final static int MAX_FULLNESS = 8;
   private final static int MAX_HAPPINESS = 8;
 
-  public Tamagotchi(int energy, int fullness, int happiness) {
-    mEnergy = energy;
-    mFullness = fullness;
-    mHappiness = happiness;
+  public Tamagotchi() {
+    mEnergy = MAX_ENERGY;
+    mFullness = MAX_FULLNESS;
+    mHappiness = MAX_HAPPINESS;
   }
 
   public int getEnergy() {
