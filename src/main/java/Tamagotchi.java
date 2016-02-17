@@ -34,7 +34,7 @@ public class Tamagotchi {
     int fullness = getFullness();
     int happiness = getHappiness();
     boolean stillAlive = true;
-    if (energy == 0 && fullness == 0 && happiness == 0) {
+    if (energy == 0 || fullness == 0 || happiness == 0) {
       stillAlive = false;
     }
     return stillAlive;

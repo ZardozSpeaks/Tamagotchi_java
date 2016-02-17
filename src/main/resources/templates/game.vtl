@@ -1,22 +1,27 @@
+#if ($myTamagotchi.isAlive())
 <div class="container">
+  <div class="header container">
+    <h1>$name</h1>
+    <img src="/images/mametchi.jpg">
+  </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <p>Happiness: $myTamagotchi.getHappiness()</p>
+      <p>Fullness: $myTamagotchi.getFullness()</p>
+      <p>Energy: $myTamagotchi.getEnergy()</p>
+    </div>
 
+    <div class="col-sm-4">
+      <a href="/play"><button type="button" name="play">Play with me!</button></a><br>
+      <a href="/feed"><button type="button" name="feed">Feed me!</button></a><br>
+      <a href="/nap"><button type="button" name="sleep">Nap time!</button></a><br>
+    </div>
+  </div>
+</div>
+#else
 <div class="header container">
-  <h1>$name</h1>
-  <img src="/images/mametchi.jpg">
-<div>
-
-<div class="row">
-  <div class="col-sm-4">
-    <p>Happiness: $myTamagotchi.getHappiness()</p>
-    <p>Fullness: $myTamagotchi.getFullness()</p>
-    <p>Energy: $myTamagotchi.getEnergy()</p>
-  </div>
-
-  <div class="col-sm-4">
-    <a href="/play"><button type="button" name="play">Play with me!</button></a><br>
-    <a href="/feed"><button type="button" name="feed">Feed me!</button></a><br>
-    <a href="/nap"><button type="button" name="sleep">Nap time!</button></a><br>
-  </div>
-
+  <h1>$name has died :(</h1>
+  <img src="/images/dead.jpg">
+  <a href="/"><button>Don't kill the next one!</button></a>
 </div>
-</div>
+#end
